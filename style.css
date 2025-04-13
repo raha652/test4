@@ -1,62 +1,60 @@
 body {
-  font-family: "Tahoma", sans-serif;
-  background-color: #f3f3f3;
-  direction: rtl;
-  text-align: right;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 500px;
-  margin: 40px auto;
-  background: white;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  text-align: center;
   color: #333;
-}
-
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 button {
   padding: 10px 20px;
-  background: #1976d2;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 10px;
 }
 
 button:hover {
-  background: #125ea8;
+  background-color: #45a049;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="file"] {
-  width: 100%;
+form {
+  margin-top: 20px;
+}
+
+input {
   padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  margin: 5px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input[type="file"] {
+  width: 90%;
 }
 
 .hidden {
   display: none;
 }
 
-p {
+#formStatus, #uploadStatus {
+  font-size: 14px;
   margin-top: 10px;
-  font-weight: bold;
+  color: #333;
 }

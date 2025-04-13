@@ -1,24 +1,22 @@
-// 🔗 لینک Google Script
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbwoUzsiBbpIZYMnBDKSnx2BMwJWn26Ga0bBgR79W6aXcsEowywIWIaqaLVMskvEnwFK4g/exec";
+// 🔗 URL آپس‌اسکریپت شما
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbx-Ws1Bhd7ekzYtDZHk08cnsEFu_CC2UXbQX_WS8WnoELXcpWpN1WxRGj_pGHA2BoprCQ/exec";
 
 // 🔗 اطلاعات ربات تلگرام
 const BOT_TOKEN = "7206337280:AAFSQlCNgFY5Rc4oebhrHz8IjDw6N0DNGR4";
 const CHAT_ID = "-1002503401953"; // آیدی گروه
-const THREAD_ID = 4; // آیدی تاپیک
+const THREAD_ID = 4; // آیدی تاپیک (مثلاً Bts9)
 
-// دکمه فرم
 document.getElementById("formBtn").addEventListener("click", () => {
   document.getElementById("reportForm").classList.remove("hidden");
   document.getElementById("uploadForm").classList.add("hidden");
 });
 
-// دکمه آپلود
 document.getElementById("uploadBtn").addEventListener("click", () => {
   document.getElementById("uploadForm").classList.remove("hidden");
   document.getElementById("reportForm").classList.add("hidden");
 });
 
-// فرم گزارش به Google Sheet
+// فرم گزارش به گوگل شیت
 document.getElementById("reportForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -48,7 +46,6 @@ document.getElementById("reportForm").addEventListener("submit", function (e) {
       } else {
         document.getElementById("formStatus").textContent = "❌ خطا در ارسال.";
       }
-      setTimeout(() => document.getElementById("formStatus").textContent = "", 3000);
     })
     .catch(err => {
       console.error(err);
@@ -56,7 +53,7 @@ document.getElementById("reportForm").addEventListener("submit", function (e) {
     });
 });
 
-// فرم آپلود فایل به تلگرام
+// فرم ارسال فایل به تلگرام
 document.getElementById("uploadForm").addEventListener("submit", function (e) {
   e.preventDefault();
   const formData = new FormData();
@@ -79,7 +76,6 @@ document.getElementById("uploadForm").addEventListener("submit", function (e) {
     .then(data => {
       document.getElementById("uploadStatus").textContent = "✅ فایل ارسال شد.";
       this.reset();
-      setTimeout(() => document.getElementById("uploadStatus").textContent = "", 3000);
     })
     .catch(err => {
       console.error(err);
