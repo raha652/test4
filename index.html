@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>فرم گزارش تکنسین</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>سیستم گزارش تکنسین</h1>
+    <div class="button-group">
+      <button id="formBtn">📝 فرم گزارش</button>
+      <button id="uploadBtn">📸 ارسال ویدیو/عکس</button>
+    </div>
+
+    <!-- فرم گزارش -->
+    <form id="reportForm" class="hidden">
+      <input type="text" id="technician" name="technician" placeholder="تکنسین" required />
+      <input type="text" id="technician_assistant" name="technician_assistant" placeholder="تکنسین همراه" />
+      <input type="text" id="task" name="task" placeholder="تسک" required />
+      <input type="text" id="activity" name="activity" placeholder="فعالیت انجام شده" />
+      <input type="text" id="device_details" name="device_details" placeholder="مشخصات دستگاه (در صورت نصب)" />
+      <input type="date" id="date" name="date" required />
+      <input type="text" id="employee_id" name="employee_id" placeholder="آی‌دی کارمند" required />
+      <input type="text" id="base" name="base" placeholder="بیس" />
+      <button type="submit">📤 ارسال گزارش</button>
+      <p id="formStatus"></p>
+    </form>
+
+    <!-- فرم آپلود فایل -->
+    <form id="uploadForm" class="hidden">
+      <input type="file" name="media" accept="image/*,video/*" required />
+      <button type="submit">📤 ارسال فایل</button>
+      <p id="uploadStatus"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
