@@ -1,5 +1,5 @@
 // 🔗 لینک Google Script
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbxPI_AEqhei31X_ZvEptHGRNNUNUHuVZhaGrdFWbuEvt1SfRZpl6R8-wk9ivOL9Lgr7jg/exec";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbwoUzsiBbpIZYMnBDKSnx2BMwJWn26Ga0bBgR79W6aXcsEowywIWIaqaLVMskvEnwFK4g/exec";
 
 // 🔗 اطلاعات ربات تلگرام
 const BOT_TOKEN = "7206337280:AAFSQlCNgFY5Rc4oebhrHz8IjDw6N0DNGR4";
